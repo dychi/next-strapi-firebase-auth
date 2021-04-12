@@ -14,7 +14,7 @@ npx tailwindcss init -p
 ```
 
 ### テストの設定
-モジュールのインストール
+- モジュールのインストール
 ```
 yarn add --dev @testing-library/react @types/jest jest ts-jest
 ```
@@ -37,3 +37,4 @@ module.exports = {
   },
 }
 ```
+- [テストの書き方](https://github.com/syuji-higa/demo-fizzbuzz-nextjs-tdd)
