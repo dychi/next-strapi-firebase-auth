@@ -13,3 +13,27 @@ yarn add --dev tailwindcss@latest postcss@latest autoprefixer@latest
 npx tailwindcss init -p
 ```
 
+### テストの設定
+モジュールのインストール
+```
+yarn add --dev @testing-library/react @types/jest jest ts-jest
+```
+```jest.config.js```の追加
+```js
+module.exports = {
+  preset: 'ts-jest',
+  roots: ['<rootDir>/src'],
+  moduleNameMapper: {
+    '^~/(.+)': '<rootDir>/src/$1',
+    '\\.css$': '<rootDir>/node_modules/jest-css-modules',
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  globals: {
+    'ts-jest': {
+      tsconfig: {
+        jsx: 'react',
+      },
+    },
+  },
+}
+```
